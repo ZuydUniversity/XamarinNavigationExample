@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:XamarinTutorialApp"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarItemColor="Black"
+            android:TabbedPage.BarSelectedItemColor="Green"
+            x:Class="XamarinTutorialApp.HomePageTab"
+            >
+    <NavigationPage Title="History">
+        <x:Arguments>
+            <local:HistoryPage Title="History" />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Map">
+        <x:Arguments>
+            <local:MapPage Title="Map" />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Profile">
+        <x:Arguments>
+            <local:ProfilePage Title="Profile" />
+        </x:Arguments>
+    </NavigationPage>
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="MenuItem_OnClicked" />
+    </TabbedPage.ToolbarItems>
+</TabbedPage>
